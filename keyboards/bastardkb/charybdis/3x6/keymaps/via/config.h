@@ -36,7 +36,8 @@
 #endif // POINTING_DEVICE_ENABLE
 
 // Configure the global tapping term (default: 200ms)
-#define TAPPING_TERM 300
+#define TAPPING_TERM 250
+#define PERMISSIVE_HOLD
 
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
-#define QUICK_TAP_TERM 25
+#define QUICK_TAP_TERM 75
