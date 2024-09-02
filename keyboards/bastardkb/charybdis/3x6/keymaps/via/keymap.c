@@ -15,7 +15,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
-#include "features/achordion.h"
 
 enum charybdis_keymap_layers {
     LAYER_BASE = 0,
@@ -145,12 +144,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 // clang-format on
 
-bool process_record_user(uint16_t keycode, keyrecord_t* record) {
-  if (!process_achordion(keycode, record)) { return false; }
-
-  return true;
-}
-
 #ifdef POINTING_DEVICE_ENABLE
 #    ifdef CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
@@ -175,7 +168,6 @@ void matrix_scan_user(void) {
         rgb_matrix_mode_noeeprom(RGB_MATRIX_DEFAULT_MODE);
 #        endif // RGB_MATRIX_ENABLE
     }
-    achordion_task();
 }
 #    endif // CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 
