@@ -43,16 +43,16 @@ static uint16_t auto_pointer_layer_timer = 0;
 #define PT_SLSH LT(LAYER_POINTER, KC_SLSH)
 
 // Left-hand home row mods
-#define CTL_A LCTL_T(KC_A)
-#define ALT_R LALT_T(KC_R)
-#define GUI_S LGUI_T(KC_S)
-#define SHFT_T LSFT_T(KC_T)
+#define CTL_Q LCTL_T(KC_Q)
+#define ALT_W LALT_T(KC_W)
+#define GUI_F LGUI_T(KC_F)
+#define SFT_P LSFT_T(KC_P)
 
 // Right-hand home row mods
-#define SFT_N RSFT_T(KC_N)
-#define GUI_E RGUI_T(KC_E)
-#define ALT_I LALT_T(KC_I)
-#define CTL_O RCTL_T(KC_O)
+#define SFT_L RSFT_T(KC_L)
+#define GUI_U RGUI_T(KC_U)
+#define ALT_Y LALT_T(KC_Y)
+#define CTL_CM RCTL_T(KC_SCLN)
 
 // Special keys
 #define LW_BSPC LT(LAYER_LOWER, KC_BSPC)
@@ -72,11 +72,11 @@ static uint16_t auto_pointer_layer_timer = 0;
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT(
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-       KC_LGUI,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,       KC_J,    KC_L,    KC_U,    KC_Y, KC_SCLN,   TG(5),
+       KC_LGUI,   CTL_Q,   ALT_W,   GUI_F,   SFT_P,    KC_B,       KC_J,   SFT_L,   GUI_U,   ALT_Y,  CTL_CM,   TG(5),
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        KC_ESC,    CTL_A,  ALT_R,   GUI_S,  SHFT_T,    KC_G,       KC_M,   SFT_N,   GUI_E,   ALT_I,   CTL_O,  KC_ESC,
+        KC_ESC,    KC_A,    KC_R,    KC_S,    KC_T,    KC_G,       KC_M,    KC_N,    KC_E,    KC_I,    KC_O,  KC_ESC,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_LSFT,    PT_Z,    KC_X,    KC_C,    KC_D,    KC_V,       KC_K,    KC_H, KC_COMM,  KC_DOT, KC_SLSH,  PT_Z,
+       KC_CAPS,    PT_Z,    KC_X,    KC_C,    KC_D,    KC_V,       KC_K,    KC_H, KC_COMM,  KC_DOT, KC_SLSH,  PT_Z,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                   KC_BSPC, NAV_SPC,  KC_TAB,     RS_ENT, LW_BSPC
   //                            ╰───────────────────────────╯ ╰──────────────────╯
